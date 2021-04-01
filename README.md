@@ -2,7 +2,7 @@
 Andrés Molinares
 
 En este repositorio se encuentran los scripts de mi ejercicio de BD, cada uno corresponde a un motor en especifico (el cual se especifica en el nombre del archivo),
-y en la carpeta informes se encuentra el primer entregable del primer corte correspondiente a las sentencias DDL.
+y en la carpeta informes se encontraran todos los entregables.
 
 --
 En esta playlist estará todo el desarrollo del ejercicio en vídeo:
