@@ -33,7 +33,7 @@ CREATE TABLE `cuota_mensual` (
   KEY `idx_cuota_niño` (`niño_id`),
   CONSTRAINT `fk_cuota_niño` FOREIGN KEY (`niño_id`) REFERENCES `niño` (`id_matricula`),
   CONSTRAINT `fk_cuota_pagador` FOREIGN KEY (`pagador_id`) REFERENCES `pagador` (`dni`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `ingredientes` (
   KEY `idx_ingredientes_plato` (`plato_id`),
   CONSTRAINT `fk_ingredientes_niño` FOREIGN KEY (`niño_id`) REFERENCES `niño` (`id_matricula`),
   CONSTRAINT `fk_ingredientes_plato` FOREIGN KEY (`plato_id`) REFERENCES `plato` (`nombre`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,7 +84,7 @@ DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu` (
   `id_menu` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_menu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +116,7 @@ CREATE TABLE `niño` (
   KEY `idx_niño_menu` (`menu_id`),
   CONSTRAINT `fk_niño_menu` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`id_menu`),
   CONSTRAINT `fk_niño_persona` FOREIGN KEY (`persona_id`) REFERENCES `personas` (`dni`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -141,7 +141,7 @@ CREATE TABLE `pagador` (
   PRIMARY KEY (`dni`),
   KEY `idx_persona_pagador` (`dni`),
   CONSTRAINT `fk_persona_pagador` FOREIGN KEY (`dni`) REFERENCES `personas` (`dni`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -167,7 +167,7 @@ CREATE TABLE `personas` (
   `telefono` varchar(15) NOT NULL,
   `parentezco` varchar(20) NOT NULL,
   PRIMARY KEY (`dni`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,7 +194,7 @@ CREATE TABLE `plato` (
   PRIMARY KEY (`nombre`),
   KEY `idx_plato_menu` (`menu_id`),
   CONSTRAINT `fk_plato_menu` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`id_menu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
