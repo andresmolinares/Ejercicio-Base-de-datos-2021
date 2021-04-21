@@ -122,6 +122,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Menu](
 	[id_menu] [int] NOT NULL,
+	[nombre] [varchar](100) NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[id_menu] ASC
@@ -156,6 +157,7 @@ GO
 CREATE TABLE [dbo].[pagador](
 	[dni] [varchar](15) NOT NULL,
 	[numero_cuenta] [varchar](20) NOT NULL,
+	[banco] [varchar](50) NOT NULL
 PRIMARY KEY CLUSTERED 
 (
 	[dni] ASC

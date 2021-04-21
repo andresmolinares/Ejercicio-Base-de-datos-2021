@@ -54,7 +54,8 @@ ALTER TABLE public.ingrediente OWNER TO postgres;
 --
 
 CREATE TABLE public.menu (
-    id_menu integer NOT NULL
+    id_menu integer NOT NULL,
+    nombre varying(100) NOT NULL,
 );
 
 
@@ -83,7 +84,8 @@ ALTER TABLE public."ni¤o" OWNER TO postgres;
 
 CREATE TABLE public.pagador (
     dni character varying(15) NOT NULL,
-    numero_cuenta character varying(20) NOT NULL
+    numero_cuenta character varying(20) NOT NULL,
+    banco character varying(50) NOT NULL
 );
 
 

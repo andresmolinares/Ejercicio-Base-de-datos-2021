@@ -83,6 +83,7 @@ DROP TABLE IF EXISTS `menu`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `menu` (
   `id_menu` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL AUTO_INCREMENT
   PRIMARY KEY (`id_menu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -138,6 +139,8 @@ DROP TABLE IF EXISTS `pagador`;
 CREATE TABLE `pagador` (
   `dni` varchar(11) NOT NULL,
   `numero_cuenta` varchar(20) NOT NULL,
+  `banco` varchar(100) NOT NULL,
+  
   PRIMARY KEY (`dni`),
   KEY `idx_persona_pagador` (`dni`),
   CONSTRAINT `fk_persona_pagador` FOREIGN KEY (`dni`) REFERENCES `personas` (`dni`)

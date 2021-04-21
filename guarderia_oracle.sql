@@ -1,5 +1,5 @@
 --------------------------------------------------------
--- Archivo creado  - miércoles-marzo-31-2021   
+-- Archivo creado  - miï¿½rcoles-marzo-31-2021   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table CUOTA_MENSUAL
@@ -33,7 +33,8 @@
 --------------------------------------------------------
 
   CREATE TABLE "ANDRES"."MENU" 
-   (	"ID_MENU" NUMBER(*,0)
+   (	"ID_MENU" NUMBER(*,0),
+    	"NOMBRE" VARCHAR2(100 BYTE)
    ) SEGMENT CREATION DEFERRED 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
@@ -61,7 +62,8 @@
 
   CREATE TABLE "ANDRES"."PAGADOR" 
    (	"DNI" VARCHAR2(15 BYTE), 
-	"NUMERO_CUENTA" VARCHAR2(20 BYTE)
+	"NUMERO_CUENTA" VARCHAR2(20 BYTE),
+	"BANCO" VARCHAR2(50 BYTE)
    ) SEGMENT CREATION DEFERRED 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
